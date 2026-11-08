@@ -1,1 +1,123 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101820">
+<title>Airdrop | Accessories for Everyone</title>
+<style>
+:root{--ink:#101820;--gold:#d9b56d;--cream:#f7f4ee;--muted:#6e7479}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink)}
+header{background:var(--ink);color:white;padding:17px 6%;display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;z-index:5}
+.logo{font-size:27px;font-weight:900;letter-spacing:3px;color:var(--gold)}
+nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}nav a{color:white;text-decoration:none;font-size:14px}
+.actions{display:flex;gap:9px;align-items:center}button,select{font:inherit;cursor:pointer}
+.pill{border:1px solid var(--gold);background:transparent;color:white;padding:9px 13px;border-radius:22px}
+.hero{padding:75px 7%;background:linear-gradient(115deg,#101820 0%,#24333b 65%,#6a5536 100%);color:white;min-height:350px;display:flex;align-items:center}
+.hero-inner{max-width:650px}.eyebrow{color:var(--gold);letter-spacing:3px;font-size:12px;font-weight:bold}
+h1{font-size:clamp(42px,7vw,72px);line-height:1.02;margin:14px 0}
+.hero p{color:#e3e5e5;line-height:1.7;max-width:510px}
+.cta{display:inline-block;background:var(--gold);color:#101820;text-decoration:none;padding:13px 22px;border-radius:25px;font-weight:bold;margin-top:12px}
+section{padding:52px 6%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;flex-wrap:wrap;margin-bottom:24px}
+h2{font-size:30px;margin:0 0 8px}.sub{color:var(--muted);margin:0}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}
+.filters button{border:1px solid #d7d2c8;background:white;border-radius:22px;padding:9px 15px;color:var(--ink)}
+.filters button.active{background:var(--ink);color:white}
+.search{padding:11px 14px;border:1px solid #d7d2c8;border-radius:22px;min-width:210px;background:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 5px 20px #17212a0d}
+.product-art{height:180px;display:grid;place-items:center;background:linear-gradient(135deg,#e8e1d4,#f8f6f1);font-size:64px}
+.card-body{padding:16px}.tag{font-size:11px;color:#8a6a30;text-transform:uppercase;letter-spacing:1px}
+.card h3{margin:7px 0}.price{font-weight:bold;margin:10px 0 13px}
+.add{width:100%;border:0;background:var(--ink);color:white;padding:11px;border-radius:8px}
+.add:hover{background:#31444e}
+.cart-box{background:white;border-radius:14px;padding:18px;max-width:600px}
+.cart-line{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #eee}
+footer{background:var(--ink);color:#dce0e1;padding:32px 6%;text-align:center}
+footer strong{color:var(--gold);letter-spacing:2px}
+.note{font-size:12px;color:var(--muted);line-height:1.6}
+@media(max-width:650px){header{padding:14px 4%;flex-wrap:wrap}nav{order:3;width:100%;justify-content:center;gap:13px}.hero{padding:55px 6%;min-height:320px}section{padding:40px 5%}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">AIRDROP</div>
+  <nav><a href="#home" data-en="Home" data-bn="হোম">Home</a><a href="#products" data-en="Shop" data-bn="শপ">Shop</a><a href="#categories" data-en="Categories" data-bn="ক্যাটাগরি">Categories</a><a href="#contact" data-en="Contact" data-bn="যোগাযোগ">Contact</a></nav>
+  <div class="actions"><button class="pill" id="langBtn" aria-label="Change language">বাংলা</button><a class="pill" href="#cart" style="text-decoration:none" id="cartLink">Cart (<span id="cartCount">0</span>)</a><a class="pill" href="https://wa.me/8801622787018" target="_blank" rel="noopener" style="text-decoration:none">WhatsApp</a></div>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+<div class="eyebrow" data-en="STYLE FOR EVERYONE" data-bn="সবার জন্য স্টাইল">STYLE FOR EVERYONE</div>
+<h1 data-en="Accessories that define you." data-bn="আপনার স্টাইল, আপনার পরিচয়।">Accessories that define you.</h1>
+<p data-en="Discover everyday essentials and statement pieces for everyone. Find your next favourite at Airdrop." data-bn="সবার জন্য প্রতিদিনের প্রয়োজনীয় ও আকর্ষণীয় অ্যাক্সেসরিজ খুঁজে নিন। Airdrop-এ বেছে নিন আপনার পছন্দেরটি।">Discover everyday essentials and statement pieces for everyone. Find your next favourite at Airdrop.</p>
+<a class="cta" href="#products" data-en="Explore collection" data-bn="কালেকশন দেখুন">Explore collection</a>
+</div></section>
+<section id="categories">
+<div class="section-head"><div><h2 data-en="Shop by category" data-bn="ক্যাটাগরি অনুযায়ী কিনুন">Shop by category</h2><p class="sub" data-en="A little detail makes a big difference." data-bn="ছোট্ট একটি অনুষঙ্গেই বদলে যায় পুরো লুক।">A little detail makes a big difference.</p></div></div>
+<div class="filters" id="filters">
+<button class="active" data-cat="All" data-en="All" data-bn="সব">All</button><button data-cat="Men" data-en="Men" data-bn="ছেলেদের">Men</button><button data-cat="Women" data-en="Women" data-bn="মেয়েদের">Women</button><button data-cat="Jewelry" data-en="Jewelry" data-bn="জুয়েলারি">Jewelry</button><button data-cat="Watches" data-en="Watches" data-bn="ঘড়ি">Watches</button><button data-cat="Sunglasses" data-en="Sunglasses" data-bn="সানগ্লাস">Sunglasses</button><button data-cat="Other" data-en="Other" data-bn="অন্যান্য">Other</button>
+</div>
+</section>
+<section id="products" style="padding-top:0">
+<div class="section-head"><div><h2 data-en="Featured products" data-bn="জনপ্রিয় পণ্য">Featured products</h2><p class="sub" data-en="Demo items — replace with your real products and prices." data-bn="ডেমো পণ্য — পরে নিজের পণ্য ও দাম দিয়ে পরিবর্তন করুন।">Demo items — replace with your real products and prices.</p></div><input class="search" id="search" placeholder="Search products..." aria-label="Search products"></div>
+<div class="grid" id="productGrid"></div>
+</section>
+<section id="cart">
+<div class="section-head"><div><h2 data-en="Your cart" data-bn="আপনার কার্ট">Your cart</h2><p class="sub" data-en="Items you have selected." data-bn="আপনার পছন্দ করা পণ্যগুলো।">Items you have selected.</p></div></div>
+<div class="cart-box"><div id="cartItems"><p class="sub" data-en="Your cart is empty." data-bn="আপনার কার্ট খালি।">Your cart is empty.</p></div><h3><span data-en="Total" data-bn="সর্বমোট">Total</span>: ৳<span id="total">0</span></h3><button class="add" id="checkout" data-en="Order on WhatsApp" data-bn="WhatsApp-এ অর্ডার করুন">Order on WhatsApp</button><p class="note" data-en="Demo store: checkout is not connected to payment or delivery yet. Add your business contact details before publishing." data-bn="এটি ডেমো স্টোর: পেমেন্ট বা ডেলিভারি এখনো যুক্ত করা হয়নি। প্রকাশের আগে ব্যবসার যোগাযোগের তথ্য যোগ করুন।">Demo store: checkout is not connected to payment or delivery yet. Add your business contact details before publishing.</p></div>
+</section>
+<section id="contact"><h2 data-en="Contact Airdrop" data-bn="Airdrop-এর সাথে যোগাযোগ">Contact Airdrop</h2><p class="sub" data-en="Message us on WhatsApp for product details and orders." data-bn="পণ্যের বিস্তারিত ও অর্ডারের জন্য WhatsApp-এ মেসেজ করুন।">Message us on WhatsApp for product details and orders.</p><p><strong>WhatsApp:</strong> <a href="https://wa.me/8801622787018" target="_blank" rel="noopener">+880 1622-787018</a></p></section>
+</main>
+<footer><strong>AIRDROP</strong><p data-en="Accessories for everyone." data-bn="সবার জন্য অ্যাক্সেসরিজ।">Accessories for everyone.</p><small>© 2026 Airdrop. Demo website.</small></footer>
+<script>
+const products=[
+{id:1,name:"Classic Watch",bn:"ক্লাসিক ঘড়ি",cat:"Watches",price:1250,icon:"⌚"},
+{id:2,name:"Minimal Bracelet",bn:"মিনিমাল ব্রেসলেট",cat:"Jewelry",price:450,icon:"📿"},
+{id:3,name:"Everyday Sunglasses",bn:"প্রতিদিনের সানগ্লাস",cat:"Sunglasses",price:650,icon:"🕶️"},
+{id:4,name:"Leather Wallet",bn:"লেদার ওয়ালেট",cat:"Men",price:550,icon:"👛"},
+{id:5,name:"Elegant Necklace",bn:"এলিগ্যান্ট নেকলেস",cat:"Women",price:850,icon:"📿"},
+{id:6,name:"Travel Cap",bn:"ট্রাভেল ক্যাপ",cat:"Other",price:350,icon:"🧢"}
+];
+let lang="en",category="All",cart={};
+const money=n=>n.toLocaleString("en-BD");
+function renderProducts(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const list=products.filter(p=>(category==="All"||p.cat===category)&&(`${p.name} ${p.bn} ${p.cat}`).toLowerCase().includes(q));
+ document.getElementById("productGrid").innerHTML=list.map(p=>`<article class="card"><div class="product-art">${p.icon}</div><div class="card-body"><div class="tag">${lang==="bn"?({Men:"ছেলেদের",Women:"মেয়েদের",Jewelry:"জুয়েলারি",Watches:"ঘড়ি",Sunglasses:"সানগ্লাস",Other:"অন্যান্য"}[p.cat]||p.cat):p.cat}</div><h3>${lang==="en"?p.name:p.bn}</h3><div class="price">৳${money(p.price)}</div><button class="add" onclick="addToCart(${p.id})">${lang==="en"?"Add to cart":"কার্টে যোগ করুন"}</button></div></article>`).join("")||`<p>${lang==="en"?"No products found.":"কোনো পণ্য পাওয়া যায়নি।"}</p>`;
+}
+function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart()}
+function renderCart(){
+ const entries=Object.entries(cart).filter(([,q])=>q>0);
+ document.getElementById("cartCount").textContent=entries.reduce((s,[,q])=>s+q,0);
+ document.getElementById("cartItems").innerHTML=entries.length?entries.map(([id,q])=>{let p=products.find(x=>x.id==id);return `<div class="cart-line"><span>${lang==="en"?p.name:p.bn} × ${q}</span><span>৳${money(p.price*q)} <button onclick="removeItem(${id})" aria-label="Remove">×</button></span></div>`}).join(""):`<p class="sub">${lang==="en"?"Your cart is empty.":"আপনার কার্ট খালি।"}</p>`;
+ document.getElementById("total").textContent=money(entries.reduce((s,[id,q])=>s+products.find(p=>p.id==id).price*q,0));
+}
+function removeItem(id){delete cart[id];renderCart()}
+document.getElementById("filters").addEventListener("click",e=>{let b=e.target.closest("button[data-cat]");if(!b)return;category=b.dataset.cat;document.querySelectorAll("#filters button").forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
+document.getElementById("search").addEventListener("input",renderProducts);
+function applyLanguage(){
+ document.documentElement.lang=lang;
+ document.getElementById("langBtn").textContent=lang==="en"?"বাংলা":"English";
+ document.querySelectorAll("[data-en][data-bn]").forEach(el=>{
+   const value=el.getAttribute("data-"+lang);
+   if(value!==null) el.textContent=value;
+ });
+ document.getElementById("search").placeholder=lang==="en"?"Search products...":"পণ্য খুঁজুন...";
+ document.getElementById("cartLink").childNodes[0].textContent=lang==="en"?"Cart (":"কার্ট (";
+ renderProducts();renderCart();
+}
+document.getElementById("langBtn").addEventListener("click",()=>{
+ lang=lang==="en"?"bn":"en";
+ applyLanguage();
+});
+document.getElementById("checkout").addEventListener("click",()=>{
+ const entries=Object.entries(cart).filter(([,q])=>q>0);
+ if(!entries.length){alert(lang==="en"?"Your cart is empty. Add a product first.":"আপনার কার্ট খালি। আগে একটি পণ্য যোগ করুন।");return;}
+ const lines=entries.map(([id,q])=>{const p=products.find(x=>x.id==id);return `${lang==="en"?p.name:p.bn} x ${q} = BDT ${p.price*q}`;});
+ const total=entries.reduce((s,[id,q])=>s+products.find(p=>p.id==id).price*q,0);
+ const message=(lang==="en"?"Hello Airdrop! I would like to order:\\n":"হ্যালো Airdrop! আমি অর্ডার করতে চাই:\\n")+lines.join("\\n")+"\\n"+(lang==="en"?"Total: BDT ":"সর্বমোট: BDT ")+total;
+ window.open("https://wa.me/8801622787018?text="+encodeURIComponent(message),"_blank","noopener");
+});
+renderProducts();renderCart();
+</script>
+</body></html>
